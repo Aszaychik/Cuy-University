@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TAILWIND -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <!-- TAILWIND END -->
+    <title>BULB</title>
+  </head>
+  <body>
+    <!-- CONTENT -->
+    <div class="flex justify-center items-center min-h-screen bg-gray-500 gap-4">
+      <!-- BULB1 -->
+      <div class="flex flex-col gap-2 items-center">
+        <figure>
+          <img src="src/off.gif" alt="" id="bulb1" />
+        </figure>
+        <label for="default-toggle1" class="inline-flex relative items-center cursor-pointer">
+          <input type="checkbox" value="" id="default-toggle1" class="sr-only peer" onchange="switchBulb(1)" />
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+          ></div>
+        </label>
+      </div>
+      <!-- BULB1 END -->
+      <!-- BULB2 -->
+      <div class="flex flex-col gap-2 items-center">
+        <figure>
+          <img src="src/off.gif" alt="" id="bulb2" />
+        </figure>
+        <label for="default-toggle2" class="inline-flex relative items-center cursor-pointer">
+          <input type="checkbox" value="" id="default-toggle2" class="sr-only peer" onchange="switchBulb(2)" />
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+          ></div>
+        </label>
+      </div>
+      <!-- BULB2 END -->
+      <!-- BULB3 -->
+      <div class="flex flex-col gap-2 items-center">
+        <figure>
+          <img src="src/off.gif" alt="" id="bulb3" />
+        </figure>
+        <label for="default-toggle3" class="inline-flex relative items-center cursor-pointer">
+          <input type="checkbox" value="" id="default-toggle3" class="sr-only peer" onchange="switchBulb(3)" />
+          <div
+            class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+          ></div>
+        </label>
+      </div>
+      <!-- BULB3 END -->
+    </div>
+    <!-- CONTENT END-->
+    <!-- JS SCRIPT -->
+    <script src="switch.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <!-- JS SCRIPT END -->
+  </body>
+</html>
