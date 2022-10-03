@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locale Storage</title>
+    <style>
+      #root {
+        background-color: #e1ffee;
+        font-size: 2em;
+        text-align: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CONTENT -->
+    <div id="root">
+      <input type="text" name="usernameInput" id="usernameInput" placeholder="Username" required />
+      <br />
+      <input type="password" name="passwordInput" id="passwordInput" placeholder="Password" required />
+      <br />
+      <button type="submit" onclick="onLogin()" id="loginBtn">Login</button>
+      <button type="submit" onclick="onLogOut()" id="logOutBtn">Log Out</button>
+      <h1 id="admin">LOGIN ADMIN</h1>
+      <h1 id="user">LOGIN USER</h1>
+    </div>
+    <!-- CONTENT END -->
+    <script type="application/javascript">
+      let usernameInput = document.getElementById("usernameInput");
+      let passwordInput = document.getElementById("passwordInput");
+      let loginBtn = document.getElementById("loginBtn");
+      let logOutBtn = document.getElementById("logOutBtn");
+      let admin = document.getElementById("admin");
+      let user = document.getElementById("user");
+
+      logOutBtn.style.display = "none";
+
+      admin.style.display = "none";
+      user.style.display = "none";
+
+      function onLogin() {
+        localStorage.setItem("username", usernameInput.value);
+
+        if (usernameInput.value == "asz" && passwordInput.value == "890") {
+          alert("Admin Login !");
+          localStorage.setItem("role", "admin");
+          usernameInput.style.display = "none";
+          passwordInput.style.display = "none";
+          loginBtn.style.display = "none";
+          user.style.display = "none";
+          admin.style.display = "block";
+        } else {
+          alert("User Login !");
+          localStorage.setItem("role", "user");
+          usernameInput.style.display = "none";
+          passwordInput.style.display = "none";
+          loginBtn.style.display = "none";
+          admin.style.display = "none";
+          user.style.display = "block";
+        }
+      }
+      if (localStorage.getItem("username")) {
+        usernameInput.style.display = "none";
+        passwordInput.style.display = "none";
+        loginBtn.style.display = "none";
+        logOutBtn.style.display = "block";
+
+        if (localStorage.getItem("role") == "admin") {
+          user.style.display = "none";
+          admin.style.display = "block";
+        } else {
+          admin.style.display = "none";
+          user.style.display = "block";
+        }
+      }
+      function onLogOut() {
+        localStorage.clear();
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
