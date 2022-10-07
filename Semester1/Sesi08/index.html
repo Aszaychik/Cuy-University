@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- CSS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <main class="d-flex justify-content-center align-items-center min-vh-100 bg-dark text-bg-dark">
+      <div class="d-flex flex-column">
+        <h1 class="text-uppercase fw-bold">Password Generator</h1>
+        <fieldset class="form-control form-control-lg d-flex flex-column gap-2 mt-3 text-uppercase fw-bold">
+          <label for="passwordLength">password length</label>
+          <input type="number" name="passwordLength" id="passwordLength" class="form-control form-control-lg" required placeholder="Input Password Lenght" />
+          <label for="password">password</label>
+          <input type="password" name="password" id="password" class="form-control form-control-lg" disabled placeholder="Your Generated Password" />
+          <button name="passwordLength" class="form-control form-control-lg btn btn-dark mt-2 fw-bold text-uppercase" onclick="getPassword()">generate password</button>
+          <a class="form-control form-control-lg btn btn-primary mt-2 fw-bold text-uppercase" onclick="copyPassword()">copy password</a>
+        </fieldset>
+      </div>
+    </main>
+    <script src="index.js"></script>
+    <!-- CSS JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS JAVASCRIPT END -->
+  </body>
+</html>
