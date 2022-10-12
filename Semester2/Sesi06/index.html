@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Archive PV</title>
+    <style>
+      *,
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+      }
+
+      #pv3 {
+        position: fixed;
+        object-fit: cover;
+        bottom: 0;
+        right: 0;
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+      }
+
+      .intro {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #336ca5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+      }
+
+      #btn {
+        border: none;
+        padding: 12px;
+        margin-top: 20px;
+        width: 200px;
+        background-color: #336ca5;
+        color: white;
+        font-weight: 800;
+        cursor: pointer;
+        border-radius: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay id="pv3">
+      <source src="assets/【Blue Archive】3rd PV.mp4" type="video/mp4" />
+    </video>
+    <main>
+      <section class="intro">
+        <img src="assets/Blue_Archive_logo_JP.png" alt="" width="200px" height="100px" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repudiandae hic ea similique totam, adipisci nulla dolorem aut sed itaque, ipsam ex asperiores fugit, voluptatem quidem saepe dicta facilis voluptates.</p>
+        <button id="btn" onclick="triggerBtn()">PAUSE</button>
+      </section>
+    </main>
+    <script>
+      const pv3 = document.getElementById("pv3");
+      const btn = document.getElementById("btn");
+
+      function triggerBtn() {
+        if (pv3.paused) {
+          pv3.play();
+          btn.innerHTML = "PAUSE";
+        } else {
+          pv3.pause();
+          btn.innerHTML = "PLAY";
+        }
+      }
+    </script>
+  </body>
+</html>
