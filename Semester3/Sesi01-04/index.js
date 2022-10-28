@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/school", (req, res) => {
-  const sql = `SELECT Name FROM characters WHERE School = ${req.query.School}`;
+  const sql = `SELECT Name FROM characters WHERE School = '${req.query.School}'`;
   db.query(sql, (error, result) => {
     response(200, result, "Find Characters By School", res);
   });
